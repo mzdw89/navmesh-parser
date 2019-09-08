@@ -10,7 +10,7 @@ Just copy the files into your project and you're ready to go!
 ## Example
 ```cpp
 try {
-  nav_mesh::nav_file map_nav( "path/to/map.nav" );
+  nav_mesh::nav_file map_nav( "path/to/map.nav" ); //Alternatively, you can just call map_nav.load( "path/to/map.nav" );
  
   //Figure out from where to where you'd like to find a path
  
