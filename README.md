@@ -30,6 +30,6 @@ try {
 
 ## Credits
 
-- Valve (Source Engine SDK 2013), code for parsing
-- Lee Thomason [(Micropather)](https://github.com/leethomason/MicroPather)
-- Matthew Razza [(gonav)](https://github.com/mrazza/gonav), unknown data at end of each Area
+- Valve ([Source Engine SDK 2013](https://github.com/ValveSoftware/source-sdk-2013)), code for parsing
+- Lee Thomason ([Micropather](https://github.com/leethomason/MicroPather))
+- Matthew Razza ([gonav](https://github.com/mrazza/gonav)), unknown data at end of each Area
