@@ -1,4 +1,4 @@
-# navmesh-parser
+# navmesh-parser (fixed fork for latest MSVC version, without exceptions)
  
 A parser for navmesh version 16, which is currently used by CS:GO.
 This code is mainly targeted towards pathfinding.
@@ -9,20 +9,24 @@ Just copy the files into your project and you're ready to go!
 
 ## Example
 ```cpp
-try {
-  nav_mesh::nav_file map_nav( "path/to/map.nav" ); 
-  //Alternatively, you can just call map_nav.load( "path/to/map.nav" );
+  std::error_code err { };
+  nav_mesh::nav_file map_nav( "path/to/map.nav", err ); 
+  //Alternatively, you can just call map_nav.load( "path/to/map.nav", err );
  
-  //Figure out from where to where you'd like to find a path
- 
-  auto path = map_nav.find_path( start_point, end_point );
- 
-  if ( !path.empty( ) ) {
-   //Do something
+  if(err.value() != 0) {
+	// @todo: handle errors accordingly
   }
-} catch ( const std::exception& e ) {
-  std::cout << e.what( ) << std::endl;
-}
+
+  //Figure out from where to where you'd like to find a path
+  auto path = map_nav.find_path( start_point, end_point, err );
+ 
+  if(err.value() != 0) {
+	// @todo: handle errors accordingly
+  }
+
+  if ( !path.empty( ) ) {
+   // found a path, do cool stuff
+  }
 ```
 
 ## Todo
