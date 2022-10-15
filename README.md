@@ -7,6 +7,9 @@ This code is mainly targeted towards pathfinding.
 
 Just copy the files into your project and you're ready to go!
 
+## In action
+![Mirage: T Spawn -> CT Spawn](https://i.imgur.com/UY0ecl8.png)
+
 ## Example
 ```cpp
   std::error_code err { };
